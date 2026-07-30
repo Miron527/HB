@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+🎂 С днем рождения, папа! 🤍
+</title>
+
+
+<link rel="stylesheet" href="/static/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- МУЗЫКА -->
+
+<audio id="music" loop>
+
+<source src="/static/music.mp3">
+
+</audio>
+
+
+
+
+<!-- ЭКРАН 1 -->
+
+<section class="screen hero">
+
+
+<div class="stars"></div>
+
+
+<div class="hero-content">
+
+
+<p class="subtitle">
+Поздравляем
+</p>
+
+
+<h1>
+🎂 С днем рождения, папа! 
+</h1>
+
+
+<h2>
+✨ 45 лет ✨
+</h2>
+
+
+<p class="description">
+Только начало новых приключений!
+</p>
+
+
+
+<button class="main-btn" onclick="openGift()">
+
+🎁 Открыть поздравление
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ЭКРАН 2 -->
+
+<section class="screen family">
+
+
+<div class="photo-card">
+
+
+<img src="/static/images/dad_emilia.jpg">
+
+
+</div>
+
+
+
+
+<div class="text-box">
+
+
+<h2>
+💛 От нашей большой семьи
+</h2>
+
+
+<p>
+Сегодня особенный день.
+</p>
+
+
+<p>
+Спасибо тебе за заботу,
+поддержку, любовь
+и самые счастливые моменты.
+</p>
+
+
+<p>
+Ты наш самый лучший папа.
+</p>
+
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ЭКРАН 3 -->
+
+
+<section class="screen video-section">
+
+
+<h2>
+🎬 Особенный момент для тебя
+</h2>
+
+
+
+<div class="video-frame">
+
+
+<video controls>
+
+
+<source src="/static/video/emilia.mp4">
+
+
+</video>
+
+
+</div>
+
+
+
+<p>
+Видео от Эмилии ❤️
+</p>
+
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ЭКРАН 4 -->
+
+
+<section class="screen memories">
+
+
+
+<div class="text-box">
+
+
+<h2>
+👑 Наш герой и пример
+</h2>
+
+
+<p>
+Спасибо за поддержку,
+советы и любовь.
+</p>
+
+
+<p>
+Все моменты рядом с тобой
+мы ценим больше всего.
+</p>
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="photo-card">
+
+
+<img src="/static/images/dad_son.jpg">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ЭКРАН 5 -->
+
+
+<section class="screen wishes">
+
+
+<h2>
+Несколько слов от каждого 💌
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Ека
+</h3>
+
+<p>
+Спасибо тебе за всё.
+Ты самый лучший папа ❤️
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Мирон
+</h3>
+
+<p>
+Желаю тебе здоровья,
+счастья и радости.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Нурали
+</h3>
+
+<p>
+Мы тебя очень любим ❤️
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ЭКРАН 6 -->
+
+
+<section class="screen gallery-section">
+
+
+<h2>
+Наш семейный альбом 📸
+</h2>
+
+
+
+<div class="gallery">
+
+
+<div class="polaroid">
+
+<img src="/static/images/main.png">
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="/static/images/gallery1.jpg">
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="/static/images/gallery2.jpg">
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="/static/images/gallery3.jpg">
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="/static/images/gallery4.jpg">
+
+</div>
+
+
+<div class="polaroid">
+
+<img src="/static/images/gallery5.jpg">
+
+</div>
+
+
+
+</div>
+
+
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ФИНАЛ -->
+
+
+<section class="screen final">
+
+
+<div class="heart-container"></div>
+
+
+
+<h1>
+Спасибо,
+что ты у нас есть ❤️
+</h1>
+
+
+<p>
+Мы тебя очень любим
+</p>
+
+
+<p>
+С любовью,
+твоя семья
+</p>
+
+
+<div class="final-stars">
+✨ ✨ ✨
+</div>
+</section>
+
+
+
+
+
+
+
+<script src="/static/script.js"></script>
+
+
+</body>
+
+</html>
