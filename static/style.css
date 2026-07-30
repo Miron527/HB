@@ -1422,3 +1422,74 @@ opacity:0;
     margin-top: 30px;
     width: 250px;
 }
+
+.family,
+.memories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    padding: 40px;
+}
+
+
+.side-photo {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+
+.side-photo img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+.text-box {
+    max-width: 350px;
+    text-align: center;
+}
+
+
+
+
+/* ТЕЛЕФОН */
+@media(max-width:768px){
+
+.family,
+.memories {
+
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+
+.side-photo {
+
+    width: 75%;
+    max-width: 280px;
+
+}
+
+
+.side-photo img {
+
+    height: 260px;
+
+}
+
+
+.text-box {
+
+    order: 0;
+    max-width: 90%;
+
+}
+
+
+}
