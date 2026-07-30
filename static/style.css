@@ -1903,3 +1903,106 @@ gap:8px;
 }
 
 }
+
+
+@media(max-width:768px){
+
+
+.wishes {
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+
+}
+
+
+/* первая картинка */
+
+.left-photo {
+
+    order:1;
+
+}
+
+
+/* текст */
+
+.wish-center {
+
+    order:2;
+    width:90%;
+
+}
+
+
+
+/* вторая картинка */
+
+.right-photo {
+
+    order:3;
+
+}
+
+
+
+/* кнопка в самом низу */
+
+.wishes > button {
+
+    order:4;
+
+}
+
+
+
+.wish-photo {
+
+    width:160px;
+    height:220px;
+
+}
+
+
+
+.cards {
+
+    gap:8px;
+
+}
+
+
+
+.card {
+
+    padding:8px;
+
+}
+
+
+.card h3 {
+
+    font-size:20px;
+
+}
+
+
+.card p {
+
+    font-size:13px;
+
+}
+
+
+
+.wish-title h2 {
+
+    font-size:21px;
+
+}
+
+
+
+}
