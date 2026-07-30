@@ -1849,4 +1849,57 @@ font-size:25px;
 
 }
 
+.hero {
+
+background-position:center bottom;
+
+}
+}
+.final {
+
+background-position:center bottom;
+
+}
+
+@media(max-width:768px){
+
+
+.hero {
+
+background-position:center bottom;
+background-size:contain;
+
+}
+
+
+.final {
+
+background-position:center bottom;
+background-size:contain;
+
+}
+
+
+}
+
+@media(max-width:768px){
+
+.card {
+
+padding:7px;
+
+}
+
+.card p {
+
+font-size:13px;
+
+}
+
+.cards {
+
+gap:8px;
+
+}
+
 }
