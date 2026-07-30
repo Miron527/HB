@@ -1406,3 +1406,19 @@ opacity:0;
 
 
 }
+
+.photos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photos .photo-card {
+    width: 250px;
+}
+
+.extra-photo {
+    margin-top: 30px;
+    width: 250px;
+}
