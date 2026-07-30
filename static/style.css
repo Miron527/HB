@@ -1318,62 +1318,145 @@ opacity:0;
 
 }
 
+/* 📱 ЭКРАНЫ С ФОТО И ТЕКСТОМ */
+
+/* 📱 ИДЕАЛЬНО ДЛЯ ТЕЛЕФОНА */
+
 @media(max-width:900px){
 
-    .memories,
-    .family {
 
-        flex-direction: column;
-        justify-content:center;
+    .screen {
+
+        min-height:auto;
+
+        padding:25px 12px;
+
+    }
+
+
+
+    /* семейный экран */
+
+    .family,
+    .memories {
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        gap:10px;
+
+        padding-top:25px;
+
+        padding-bottom:25px;
+
+    }
+
+
+
+    /* текст первый */
+
+    .family .text-box,
+    .memories .text-box {
+
+        order:1;
+
+        margin:0;
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
         align-items:center;
 
     }
 
 
-    .memories .text-box,
-    .family .text-box {
 
-        order:1;
+    .family .text-box h2,
+    .memories .text-box h2 {
 
-        width:90%;
-        margin:25px auto;
+        font-size:32px;
+
+        margin-bottom:10px;
+
+        line-height:1.1;
 
     }
 
 
-    .memories .photo-card,
-    .family .photo-card {
+
+    .family .text-box p,
+    .memories .text-box p {
+
+        font-size:18px;
+
+        line-height:1.3;
+
+        margin-bottom:8px;
+
+        max-width:330px;
+
+    }
+
+
+
+    /* фото на весь экран */
+
+    .family .photo-card,
+    .memories .photo-card {
 
         order:2;
 
-        width:85%;
-        max-width:350px;
+        width:95%;
 
-        transform:rotate(-2deg);
+        max-width:430px;
 
-    }
+        padding:8px;
 
+        margin:5px auto;
 
-    .memories .text-box h2,
-    .family .text-box h2 {
-
-        font-size:38px;
-        text-align:center;
-        line-height:1.2;
+        transform:none;
 
     }
 
 
-    .memories .text-box p,
-    .family .text-box p {
 
-        font-size:20px;
-        text-align:center;
+    .family .photo-card img,
+    .memories .photo-card img {
 
-        max-width:500px;
+        width:100%;
 
-        margin:auto auto 15px;
+        height:65vh;
+
+        max-height:500px;
+
+        min-height:350px;
+
+        object-fit:cover;
+
+        border-radius:20px;
 
     }
+
+
+
+    /* кнопка после фото */
+
+    .family button,
+    .memories button {
+
+        order:3;
+
+        margin-top:10px;
+
+        width:80%;
+
+    }
+
 
 }
