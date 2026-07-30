@@ -544,3 +544,41 @@ document.querySelectorAll(".screen > *").forEach(el=>{
 
 // если остался старый код сердечек,
 // он больше ничего не ломает
+
+
+let currentScreen = 0;
+
+const screens = document.querySelectorAll(".screen");
+
+
+// 🎁 Открыть поздравление
+function openGift(){
+
+    nextScreen();
+
+    const music = document.getElementById("music");
+
+    if(music){
+
+        music.play().catch(()=>{});
+
+    }
+
+}
+
+
+
+// ➡️ Следующий экран
+function nextScreen(){
+
+    if(currentScreen < screens.length - 1){
+
+        currentScreen++;
+
+        screens[currentScreen].scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
