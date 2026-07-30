@@ -1,37 +1,58 @@
-*{
+/* =====================================================
+   🎂 HAPPY BIRTHDAY DAD
+   PREMIUM FAMILY WEBSITE STYLE
+   PART 1/3
+===================================================== */
+
+
+/* ===== ОСНОВА ===== */
+
+
+* {
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
 
-html{
+html {
     scroll-behavior:smooth;
 }
 
 
-body{
+body {
 
-font-family:'Montserrat', sans-serif;
+    font-family:'Montserrat', sans-serif;
 
-color:#4a3520;
+    color:#4a3520;
 
-}
+    overflow-x:hidden;
 
-
-h1,h2,h3{
-
-font-family:'Cormorant Garamond', serif;
-
-font-weight:700;
-
-letter-spacing:1px;
+    background:#fff5df;
 
 }
 
 
 
-.screen{
+h1,
+h2,
+h3 {
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+
+
+
+/* ===== ЭКРАНЫ ===== */
+
+
+.screen {
 
     min-height:100vh;
 
@@ -43,88 +64,136 @@ letter-spacing:1px;
 
     align-items:center;
 
+    position:relative;
+
+    overflow:hidden;
+
     padding:60px;
+
+}
+
+
+
+
+
+/* ===== ПЛАВНОЕ ПОЯВЛЕНИЕ ===== */
+
+
+.screen > * {
+
+    animation:screenAppear 1.5s ease forwards;
+
+}
+
+
+
+@keyframes screenAppear {
+
+
+from {
+
+    opacity:0;
+
+    transform:
+    translateY(60px)
+    scale(.95);
+
+}
+
+
+to {
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
+}
+
+
+}
+
+
+
+
+
+/* ===== КНОПКИ ===== */
+
+
+button {
+
 
     position:relative;
 
     overflow:hidden;
 
-}
-
-
-
-
-
-/* КНОПКИ */
-
-
-button {
 
     margin-top:35px;
 
-    padding:18px 45px;
+    padding:
+
+    18px 45px;
+
 
     border:none;
 
-    border-radius:50px;
-
-
-    background:
-
-    linear-gradient(
-    45deg,
-    #b8872d,
-    #f5d77b
-    );
-
-
-    color:white;
-
-
-    font-family:'Montserrat', sans-serif;
-
-    font-size:20px;
-
-    font-weight:500;
+    border-radius:60px;
 
 
     cursor:pointer;
 
 
+    font-size:20px;
+
+    font-weight:600;
+
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #b88632,
+        #ffd86b,
+        #b88632
+    );
+
+
+    background-size:200%;
+
+
     box-shadow:
 
-    0 10px 30px rgba(170,120,40,.5);
+    0 15px 40px rgba(184,134,50,.5);
 
 
-    transition:.4s;
+    transition:.5s;
+
 
 }
+
+
+
 
 
 button:hover {
 
 
-    transform:scale(1.08);
+    transform:
+
+    translateY(-8px)
+    scale(1.08);
+
+
+    background-position:right;
 
 
     box-shadow:
 
-    0 0 40px gold;
-
-
-}
-
-
-
-button:hover{
-
-
-    transform:scale(1.08);
-
-
-    box-shadow:
-
-    0 0 40px gold;
+    0 0 50px gold;
 
 
 }
@@ -132,11 +201,65 @@ button:hover{
 
 
 
+button::after {
 
-/* ПЕРВЫЙ ЭКРАН */
+
+    content:"";
 
 
-.hero{
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+
+    width:50%;
+
+    height:100%;
+
+
+    background:
+
+    rgba(255,255,255,.5);
+
+
+    transform:
+
+    skewX(-30deg);
+
+
+    transition:.6s;
+
+
+}
+
+
+
+button:hover::after {
+
+
+    left:130%;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   🌟 ПЕРВЫЙ ЭКРАН
+===================================================== */
+
+
+
+.hero {
+
+
+    color:white;
+
+    text-align:center;
 
 
     background:
@@ -146,7 +269,7 @@ button:hover{
 
     rgba(0,0,0,.45),
 
-    rgba(0,0,0,.55)
+    rgba(0,0,0,.65)
 
     ),
 
@@ -154,109 +277,13 @@ button:hover{
     url("/static/images/main.png");
 
 
+
     background-size:cover;
+
 
     background-position:center;
 
 
-    color:white;
-
-    text-align:center;
-
-
-}
-
-
-
-.hero-content{
-
-
-    animation:appear 2s;
-
-
-}
-
-
-
-.subtitle{
-
-
-    font-size:40px;
-
-    letter-spacing:5px;
-
-
-}
-
-
-
-.hero h1{
-
-
-font-size:85px;
-
-
-background:
-
-linear-gradient(
-45deg,
-#fff,
-#ffd875,
-#fff
-);
-
-
--webkit-background-clip:text;
-
-color:transparent;
-
-
-text-shadow:
-
-0 0 30px rgba(255,215,100,.6);
-
-
-animation:titleGlow 3s infinite;
-
-
-}
-
-
-
-@keyframes titleGlow{
-
-
-50%{
-
-filter:drop-shadow(
-0 0 25px gold
-);
-
-
-}
-
-
-}
-
-
-
-.hero h2{
-
-
-    font-size:100px;
-
-    color:#ffd86a;
-
-
-}
-
-
-
-.description{
-
-
-    font-size:30px;
-
 
 }
 
@@ -264,216 +291,47 @@ filter:drop-shadow(
 
 
 
+/* затемнение + сияние */
 
-/* ЗОЛОТЫЕ КРУГИ ФОНА */
+
+.hero::before {
 
 
-.family,
-.memories,
-.wishes,
-.gallery-section{
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
 
 
     background:
 
-
     radial-gradient(
 
-    circle at top left,
+    circle,
 
-    #ffe5a3,
+    transparent,
 
-    transparent 40%
-
-    ),
-
-
-    radial-gradient(
-
-    circle at bottom right,
-
-    #e8bd62,
-
-    transparent 35%
-
-    ),
-
-
-    #fff7e8;
-
-
-}
-
-
-
-
-
-/* ФОТО КАРТОЧКА */
-
-
-.photo-card{
-
-
-    padding:15px;
-
-    background:white;
-
-
-    border-radius:30px;
-
-
-    box-shadow:
-
-    0 30px 70px rgba(0,0,0,.25);
-
-
-    transform:rotate(-3deg);
-
-
-    animation:photoShow 1.5s;
-
-
-}
-
-
-
-.photo-card img{
-
-
-    width:450px;
-
-    height:550px;
-
-
-    object-fit:cover;
-
-
-    border-radius:20px;
-
-
-}
-
-
-
-
-
-.text-box{
-
-
-    max-width:550px;
-
-
-    margin-left:60px;
-
-
-}
-
-
-
-.text-box h2{
-
-
-    font-size:50px;
-
-
-    color:#b88632;
-
-
-    margin-bottom:30px;
-
-
-}
-
-
-
-.text-box p{
-
-
-    font-size:25px;
-
-    line-height:1.5;
-
-    margin-bottom:15px;
-
-
-}
-
-
-
-
-
-/* ВИДЕО */
-
-
-.video-section{
-
-
-    flex-direction:column;
-
-
-    background:
-
-
-    linear-gradient(
-
-    135deg,
-
-    #f9e4b3,
-
-    #fff8ed
+    rgba(0,0,0,.5)
 
     );
 
 
-}
-
-
-
-.video-section h2{
-
-
-    font-size:55px;
-
-    color:#b88632;
-
 
 }
 
 
 
-.video-frame{
 
 
-    margin:40px;
-
-    padding:15px;
+.hero-content {
 
 
-    background:white;
+    position:relative;
 
-
-    border-radius:35px;
-
-
-    box-shadow:
-
-    0 30px 70px #b99;
-
-
-}
-
-
-
-.video-frame video{
-
-
-    width:700px;
-
-
-    max-width:90vw;
-
-
-    border-radius:25px;
+    z-index:2;
 
 
 }
@@ -482,139 +340,21 @@ filter:drop-shadow(
 
 
 
+.magic-text {
 
-
-/* КАРТОЧКИ */
-
-
-.wishes{
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-.wishes h2{
-
-
-    font-size:55px;
-
-    color:#b88632;
-
-
-}
-
-
-
-.cards{
-
-
-    display:flex;
-
-    gap:35px;
-
-    margin:50px;
-
-
-}
-
-
-
-
-.card{
-
-
-    width:280px;
-
-
-    background:white;
-
-
-    padding:40px;
-
-
-    border-radius:30px;
-
-
-    box-shadow:
-
-
-    0 20px 50px #ddd;
-
-
-    transition:.5s;
-
-
-}
-
-
-
-.card:hover{
-
-
-    transform:
-
-    translateY(-20px)
-
-    rotate(3deg);
-
-
-}
-
-
-
-.card h3{
-
-
-    color:#b88632;
 
     font-size:35px;
 
 
-}
+    margin-bottom:20px;
 
 
+    color:#ffe8a3;
 
 
+    animation:
 
-/* ГАЛЕРЕЯ */
-
-
-.gallery-section{
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-.gallery-section h2{
-
-
-    font-size:55px;
-
-    color:#b88632;
-
-
-}
-
-
-
-.gallery{
-
-
-    display:grid;
-
-    grid-template-columns:repeat(3,250px);
-
-    gap:30px;
-
-    margin:40px;
+    magicPulse 2s infinite;
 
 
 }
@@ -622,58 +362,22 @@ filter:drop-shadow(
 
 
 
-.polaroid{
+
+@keyframes magicPulse {
 
 
-    background:white;
+50% {
 
 
-    padding:15px;
+    transform:scale(1.12);
 
 
-    box-shadow:
+    text-shadow:
 
-    0 20px 40px #aaa;
-
-
-    transform:rotate(
-
-    calc(-5deg + 10deg * var(--r))
-
-    );
-
-
-    transition:.5s;
+    0 0 30px gold;
 
 
 }
-
-
-
-.polaroid:hover{
-
-
-    transform:
-
-    scale(1.1)
-
-    rotate(0);
-
-
-}
-
-
-
-
-.polaroid img{
-
-
-    width:220px;
-
-    height:220px;
-
-
-    object-fit:cover;
 
 
 }
@@ -683,49 +387,107 @@ filter:drop-shadow(
 
 
 
-/* ФИНАЛ */
+.subtitle {
 
 
-.final{
+    font-size:40px;
+
+    letter-spacing:8px;
+
+
+    animation:
+
+    fadeText 2s;
+
+
+}
+
+
+
+
+.hero h1 {
+
+
+    margin-top:20px;
+
+
+    font-size:
+
+    clamp(45px,8vw,90px);
+
 
 
     background:
 
-
     linear-gradient(
 
-    rgba(0,0,0,.5),
+    45deg,
 
-    rgba(0,0,0,.7)
+    white,
 
-    ),
+    #ffd86b,
 
+    white
 
-    url("/static/images/main.png");
-
-
-    background-size:cover;
-
-    background-position:center;
+    );
 
 
-    color:white;
+
+    -webkit-background-clip:text;
 
 
-    flex-direction:column;
+    color:transparent;
 
 
-    text-align:center;
+
+    filter:
+
+    drop-shadow(
+    0 0 30px gold
+    );
+
+
+    animation:
+
+    titleFloat 4s infinite;
 
 
 }
 
 
 
-.final h1{
 
 
-    font-size:75px;
+@keyframes titleFloat {
+
+
+50% {
+
+
+transform:
+
+translateY(-10px);
+
+
+}
+
+
+}
+
+
+
+
+
+
+.hero h2 {
+
+
+    font-size:
+
+    clamp(50px,8vw,100px);
+
+
+    color:#ffd86b;
 
 
     text-shadow:
@@ -738,10 +500,1427 @@ filter:drop-shadow(
 
 
 
-.final p{
+
+
+
+.description {
+
+
+    margin-top:20px;
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+
+/* ===== ЗВЕЗДЫ ===== */
+
+
+.stars {
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    radial-gradient(
+
+    white 2px,
+
+    transparent 3px
+
+    );
+
+
+    background-size:
+
+    80px 80px;
+
+
+    opacity:.25;
+
+
+    animation:
+
+    starsMove 20s linear infinite;
+
+
+}
+
+
+
+@keyframes starsMove {
+
+
+from {
+
+background-position:0 0;
+
+}
+
+
+to {
+
+background-position:500px 500px;
+
+}
+
+
+}
+
+
+
+
+
+/* =====================================================
+   ❤️ ЛЕТАЮЩИЕ СЕРДЦА
+===================================================== */
+
+
+
+.hearts {
+
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:999;
+
+
+}
+
+
+
+
+.hearts span {
+
+
+position:absolute;
+
+
+bottom:-50px;
+
+
+font-size:35px;
+
+
+opacity:.7;
+
+
+animation:
+
+heartFly 12s linear infinite;
+
+
+}
+
+
+
+
+.hearts span:nth-child(1){
+
+left:10%;
+
+}
+
+
+
+.hearts span:nth-child(2){
+
+left:30%;
+
+animation-delay:2s;
+
+}
+
+
+
+.hearts span:nth-child(3){
+
+left:50%;
+
+animation-delay:5s;
+
+}
+
+
+
+.hearts span:nth-child(4){
+
+left:70%;
+
+animation-delay:3s;
+
+}
+
+
+
+.hearts span:nth-child(5){
+
+left:90%;
+
+animation-delay:7s;
+
+}
+
+
+
+
+@keyframes heartFly {
+
+
+0% {
+
+
+transform:
+
+translateY(0)
+rotate(0);
+
+
+opacity:0;
+
+
+}
+
+
+
+30% {
+
+
+opacity:1;
+
+
+}
+
+
+
+100% {
+
+
+transform:
+
+translateY(-120vh)
+rotate(360deg);
+
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   📱 ТЕЛЕФОН - ЭКРАН 1
+===================================================== */
+
+
+
+@media(max-width:768px){
+
+
+.screen {
+
+    padding:25px 15px;
+
+}
+
+
+
+.hero {
+
+
+    min-height:100vh;
+
+
+    background-size:75% auto;
+
+
+    background-repeat:no-repeat;
+
+
+    background-position:center bottom;
+
+
+}
+
+
+
+
+.magic-text {
+
+    font-size:26px;
+
+}
+
+
+
+.subtitle {
+
+
+    font-size:20px;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:38px;
+
+
+}
+
+
+
+.hero h2 {
+
+
+    font-size:45px;
+
+
+}
+
+
+
+.description {
+
+
+    font-size:17px;
+
+
+}
+
+
+
+button {
+
+
+    padding:
+
+    14px 30px;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+}
+
+/* =====================================================
+   📸 СЕМЕЙНЫЕ ЭКРАНЫ 2 И 4
+===================================================== */
+
+
+.family,
+.memories {
+
+
+    background:
+
+
+    radial-gradient(
+    circle at top left,
+    #ffe6a8,
+    transparent 40%
+    ),
+
+
+    radial-gradient(
+    circle at bottom right,
+    #f2c96d,
+    transparent 40%
+    ),
+
+
+    #fff8eb;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:50px;
+
+
+}
+
+
+
+
+
+/* ===== ФОТО ===== */
+
+
+.side-photo {
+
+
+    width:270px;
+
+    height:370px;
+
+
+    padding:12px;
+
+
+    background:
+
+
+    linear-gradient(
+    145deg,
+    white,
+    #fff0bd
+    );
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+
+    0 30px 70px rgba(0,0,0,.25),
+
+
+    0 0 30px rgba(255,215,100,.5);
+
+
+    transform:
+
+    rotate(-4deg);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+.side-photo:last-of-type {
+
+
+    transform:
+
+    rotate(4deg);
+
+
+}
+
+
+
+
+
+.side-photo:hover {
+
+
+    transform:
+
+    scale(1.08)
+    rotate(0);
+
+
+}
+
+
+
+
+
+
+.side-photo img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:22px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ===== ТЕКСТОВЫЙ БЛОК ===== */
+
+
+
+.text-box {
+
+
+    max-width:430px;
+
+
+    padding:35px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.35);
+
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+
+    border-radius:35px;
+
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(0,0,0,.15);
+
+
+
+}
+
+
+
+
+
+.text-box h2 {
+
+
+    color:#b88632;
+
+
+    font-size:45px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.text-box p {
+
+
+    font-size:22px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   💌 ЭКРАН 5 - ПОЖЕЛАНИЯ
+===================================================== */
+
+
+
+.wishes {
+
+
+    background:
+
+
+    radial-gradient(
+    circle,
+    #fff1bd,
+    #fff8ec
+    );
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:45px;
+
+
+}
+
+
+
+
+
+/* ===== ФОТО В 5 ЭКРАНЕ ===== */
+
+
+.wish-photo {
+
+
+    width:240px;
+
+
+    height:330px;
+
+
+
+    padding:12px;
+
+
+
+    background:white;
+
+
+    border-radius:30px;
+
+
+
+    box-shadow:
+
+
+    0 25px 60px rgba(0,0,0,.3),
+
+
+    0 0 30px gold;
+
+
+
+    transform:
+
+    rotate(-5deg);
+
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.wish-photo.right-photo {
+
+
+    transform:
+
+    rotate(5deg);
+
+
+}
+
+
+
+
+.wish-photo:hover {
+
+
+    transform:
+
+    scale(1.08)
+    rotate(0);
+
+
+}
+
+
+
+
+
+.wish-photo img {
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+/* ===== ЦЕНТР 5 ЭКРАНА ===== */
+
+
+.wish-center {
+
+
+    width:420px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.wish-title {
+
+
+    padding:20px;
+
+
+    margin-bottom:25px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.4);
+
+
+
+    backdrop-filter:
+
+    blur(10px);
+
+
+
+}
+
+
+
+
+
+
+.wish-title h2 {
+
+
+    color:#b88632;
+
+
+    font-size:42px;
+
+
+}
+
+
+
+
+
+/* ===== КАРТОЧКИ ===== */
+
+
+
+.cards {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+.card {
+
+
+    padding:18px;
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.85);
+
+
+
+    border:
+
+    2px solid rgba(255,210,100,.8);
+
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,.15);
+
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+.card:hover {
+
+
+    transform:
+
+
+    translateY(-10px)
+    scale(1.03);
+
+
+}
+
+
+
+
+
+.card h3 {
+
+
+    font-size:30px;
+
+
+    color:#b88632;
+
+
+}
+
+
+
+
+
+.card p {
+
+
+    font-size:17px;
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   📱 МОБИЛЬНЫЕ ЭКРАНЫ
+===================================================== */
+
+
+
+@media(max-width:768px){
+
+
+
+.family,
+.memories,
+.wishes {
+
+
+    flex-direction:column;
+
+
+    gap:18px;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+/* порядок */
+
+
+.side-photo:first-child,
+.left-photo {
+
+
+    order:1;
+
+
+}
+
+
+
+.text-box,
+.wish-center {
+
+
+    order:2;
+
+
+}
+
+
+
+.side-photo:last-of-type,
+.right-photo {
+
+
+    order:3;
+
+
+}
+
+
+
+
+
+/* кнопка снизу */
+
+
+.family button,
+.memories button,
+.wishes button {
+
+
+    order:4;
+
+
+}
+
+
+
+
+
+
+
+.side-photo {
+
+
+    width:170px;
+
+
+    height:240px;
+
+
+}
+
+
+
+
+
+.text-box {
+
+
+    width:95%;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.text-box h2 {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+
+.text-box p {
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+
+
+.wish-photo {
+
+
+    width:160px;
+
+
+    height:220px;
+
+
+}
+
+
+
+
+
+.wish-center {
+
+
+    width:95%;
+
+
+}
+
+
+
+
+.wish-title h2 {
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+.card {
+
+
+    padding:12px;
+
+
+}
+
+
+
+
+
+.card h3 {
+
+
+    font-size:23px;
+
+
+}
+
+
+
+
+.card p {
+
+
+    font-size:14px;
+
+
+}
+
+
+
+}
+
+
+/* =====================================================
+   📸 ГАЛЕРЕЯ - СЕМЕЙНЫЙ АЛЬБОМ
+===================================================== */
+
+
+.gallery-section {
+
+
+    flex-direction:column;
+
+
+    background:
+
+
+    radial-gradient(
+    circle at top,
+    #fff0b8,
+    transparent 45%
+    ),
+
+
+    #fff8ec;
+
+
+}
+
+
+
+
+.gallery-section h2 {
+
+
+    font-size:55px;
+
+
+    color:#b88632;
+
+
+    text-align:center;
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+
+.gallery {
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,250px);
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+
+.polaroid {
+
+
+    background:white;
+
+
+    padding:15px;
+
+
+    border-radius:10px;
+
+
+    box-shadow:
+
+
+    0 25px 50px rgba(0,0,0,.25);
+
+
+    transition:.5s;
+
+
+    position:relative;
+
+
+}
+
+
+
+
+.polaroid:nth-child(odd){
+
+
+    transform:rotate(-5deg);
+
+
+}
+
+
+
+
+.polaroid:nth-child(even){
+
+
+    transform:rotate(5deg);
+
+
+}
+
+
+
+
+
+
+.polaroid:hover {
+
+
+    transform:
+
+
+    scale(1.12)
+    rotate(0);
+
+
+    z-index:5;
+
+
+    box-shadow:
+
+
+    0 0 50px gold;
+
+
+}
+
+
+
+
+
+
+.polaroid img {
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    object-fit:cover;
+
+
+    border-radius:5px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   ✨ ФИНАЛЬНЫЙ ЭКРАН
+===================================================== */
+
+
+
+.final {
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    rgba(0,0,0,.45),
+
+    rgba(0,0,0,.75)
+
+    ),
+
+
+    url("/static/images/main.png");
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+}
+
+
+
+
+
+.final::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle,
+
+    transparent,
+
+    rgba(0,0,0,.7)
+
+    );
+
+
+}
+
+
+
+
+
+.final h1,
+.final p,
+.final-stars {
+
+
+    position:relative;
+
+
+    z-index:2;
+
+
+}
+
+
+
+
+
+
+.final h1 {
+
+
+    font-size:75px;
+
+
+    color:#fff;
+
+
+    text-shadow:
+
+
+    0 0 20px gold,
+
+
+    0 0 50px #ffd86b;
+
+
+
+    animation:
+
+
+    finalGlow 3s infinite;
+
+
+}
+
+
+
+
+
+
+
+@keyframes finalGlow {
+
+
+50% {
+
+
+    transform:scale(1.05);
+
+
+    filter:
+
+    drop-shadow(
+    0 0 30px gold
+    );
+
+
+}
+
+
+}
+
+
+
+
+
+
+.final p {
 
 
     font-size:35px;
+
 
     margin-top:20px;
 
@@ -752,47 +1931,35 @@ filter:drop-shadow(
 
 
 
-/* АНИМАЦИИ */
+.final-stars {
 
 
-@keyframes appear{
+    margin-top:40px;
 
 
-from{
-
-opacity:0;
-
-transform:translateY(80px);
-
-}
+    font-size:45px;
 
 
-to{
+    animation:
 
-opacity:1;
 
-}
+    starsPulse 2s infinite;
 
 
 }
 
 
 
-@keyframes photoShow{
 
 
-from{
-
-opacity:0;
-
-transform:translateX(-100px);
-
-}
+@keyframes starsPulse {
 
 
-to{
+50% {
 
-opacity:1;
+
+    transform:scale(1.2);
+
 
 }
 
@@ -802,155 +1969,25 @@ opacity:1;
 
 
 
-/* ТЕЛЕФОН */
-
-
-@media(max-width:900px){
-
-
-.photo-card img{
-
-width:300px;
-
-height:400px;
-
-}
-
-
-.text-box{
-
-margin:20px;
-
-}
-
-
-.cards{
-
-flex-direction:column;
-
-}
-
-
-.gallery{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-
-/* ====== ЭФФЕКТЫ ====== */
-
-
-.confetti{
-
-position:fixed;
-
-top:-20px;
-
-width:12px;
-
-height:25px;
-
-z-index:99999;
-
-animation:fall linear forwards;
-
-}
 
 
 
-@keyframes fall{
-
-
-to{
-
-transform:
-
-translateY(110vh)
-
-rotate(720deg);
-
-
-opacity:0;
-
-
-}
-
-}
+/* =====================================================
+   🌟 ЗОЛОТАЯ ПЫЛЬ
+===================================================== */
 
 
 
-
-
-.firework{
+.spark {
 
 
 position:fixed;
 
-width:12px;
 
-height:12px;
-
-border-radius:50%;
-
-z-index:99999;
+width:8px;
 
 
-animation:explode 1.5s forwards;
-
-
-}
-
-
-
-@keyframes explode{
-
-
-from{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-
-to{
-
-
-transform:
-
-translate(
-var(--x),
-var(--y)
-)
-
-scale(0);
-
-
-opacity:0;
-
-
-}
-
-
-}
-
-
-
-
-
-
-.glow{
-
-
-position:fixed;
-
-width:10px;
-
-height:10px;
+height:8px;
 
 
 background:#ffd86b;
@@ -961,15 +1998,18 @@ border-radius:50%;
 
 box-shadow:
 
-0 0 25px gold;
+
+0 0 20px gold;
+
 
 
 animation:
 
-floatGlow 4s;
+
+sparkFloat 5s linear infinite;
 
 
-z-index:10;
+z-index:999;
 
 
 }
@@ -977,66 +2017,39 @@ z-index:10;
 
 
 
-@keyframes floatGlow{
+
+@keyframes sparkFloat {
 
 
-from{
+0% {
 
-transform:translateY(0);
+
+transform:
+
+translateY(100vh);
+
+
+opacity:0;
+
+
+}
+
+
+30% {
+
 
 opacity:1;
 
-}
-
-
-to{
-
-transform:
-
-translateY(-100px);
-
-opacity:0;
 
 }
 
 
-}
-
-
-
-
-
-
-
-.heart{
-
-
-position:fixed;
-
-bottom:-50px;
-
-font-size:30px;
-
-z-index:9999;
-
-animation:heartUp linear forwards;
-
-
-}
-
-
-
-@keyframes heartUp{
-
-
-to{
+100% {
 
 
 transform:
 
-translateY(-110vh)
-
-rotate(360deg);
+translateY(-20vh);
 
 
 opacity:0;
@@ -1047,773 +2060,194 @@ opacity:0;
 
 }
 
-/* ========================= */
-/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
-/* ========================= */
-
-@media (max-width: 900px) {
-
-    .screen {
-        min-height: 100vh;
-        width: 100%;
-        padding: 30px 15px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    /* Главный экран */
-
-    .subtitle {
-        font-size: 24px;
-        letter-spacing: 3px;
-    }
-
-
-    .hero h1 {
-        font-size: clamp(38px, 10vw, 55px);
-        line-height: 1.1;
-    }
-
-
-    .hero h2 {
-        font-size: 55px;
-    }
-
-
-    .description {
-        font-size: 20px;
-    }
 
 
 
-    /* Кнопки */
-
-    button {
-        width: 90%;
-        max-width:350px;
-        padding:16px 20px;
-        font-size:17px;
-        margin-top:25px;
-    }
 
 
 
-    /* Фото */
-
-    .photo-card {
-        width:90%;
-        max-width:350px;
-        padding:10px;
-        margin:auto;
-    }
+/* =====================================================
+   📱 МОБИЛЬНАЯ ГАЛЕРЕЯ И ФИНАЛ
+===================================================== */
 
 
-    .photo-card img {
+
+@media(max-width:768px){
+
+
+
+.gallery-section h2 {
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.gallery {
+
 
     width:100%;
-    height:420px;
 
-    object-fit:cover;
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:15px;
+
 
 }
 
 
 
-    /* Текст */
-
-    .text-box {
-
-        width:100%;
-        max-width:500px;
-        margin:30px 0 0 0;
-
-    }
 
 
-    .text-box h2{
-    font-size:42px;
-    line-height:1.15;
+.polaroid {
+
+
+    padding:8px;
+
+
 }
 
 
-    .text-box p {
 
-        font-size:18px;
-        line-height:1.5;
 
-    }
 
+.polaroid img {
 
 
-    /* Видео */
+    width:100%;
 
 
-    .video-section h2 {
+    height:150px;
 
-        font-size:35px;
-
-    }
-
-
-    .video-frame {
-
-        width:95%;
-        margin:25px 0;
-        padding:10px;
-
-    }
-
-
-    .video-frame video {
-
-        width:100%;
-        height:auto;
-
-    }
-
-
-
-    /* Карточки */
-
-    .cards {
-
-        display:flex;
-        flex-direction:column;
-
-        gap:20px;
-
-        width:100%;
-
-        margin:30px 0;
-
-    }
-
-
-
-    .card {
-
-        width:90%;
-        margin:auto;
-
-        padding:25px;
-
-    }
-
-
-
-    .card h3 {
-
-        font-size:30px;
-
-    }
-
-
-
-    /* Галерея */
-
-
-    .gallery {
-
-        width:100%;
-
-        display:grid;
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:15px;
-
-        margin:25px 0;
-
-    }
-
-
-
-    .polaroid {
-
-        padding:8px;
-
-    }
-
-
-
-    .polaroid img {
-
-        width:100%;
-
-        height:150px;
-
-        object-fit:cover;
-
-    }
-
-
-
-    /* Финал */
-
-
-    .final h1 {
-
-        font-size:45px;
-
-    }
-
-
-    .final p {
-
-        font-size:22px;
-
-    }
 
 }
+
+
+
+
+
+.final {
+
+
+    min-height:100vh;
+
+
+    padding:20px;
+
+
+    background-size:contain;
+
+
+    background-repeat:no-repeat;
+
+
+    background-position:center bottom;
+
+
+}
+
+
+
+
+.final h1 {
+
+
+    font-size:40px;
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+
+.final p {
+
+
+    font-size:20px;
+
+
+}
+
+
+
+.final-stars {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+}
+
+
+
+
 
 
 
 /* маленькие телефоны */
 
+
 @media(max-width:420px){
 
-
-    .hero h1 {
-
-        font-size:35px;
-
-    }
-
-
-    .hero h2 {
-
-        font-size:45px;
-
-    }
-
-
-    .subtitle {
-
-        font-size:20px;
-
-    }
-
-
-    .gallery {
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .polaroid img {
-
-        height:230px;
-
-    }
-
-
-    .text-box h2 {
-
-        font-size:30px;
-
-    }
-
-
-}
-
-/* 📱 ЭКРАНЫ С ФОТО И ТЕКСТОМ */
-
-/* 📱 ИДЕАЛЬНО ДЛЯ ТЕЛЕФОНА */
-
-/* 📱 Полный экран на телефоне */
-
-/* 📱 Только первый и последний экран */
-
-@media(max-width:900px){
-
-
-    /* Первый экран */
-
-    .hero {
-
-        min-height:90vh;
-
-        padding:20px 15px;
-
-    }
-
-
-    .hero h1 {
-
-        font-size:38px;
-
-    }
-
-
-    .hero h2 {
-
-        font-size:50px;
-
-    }
-
-
-    .subtitle {
-
-        font-size:22px;
-
-    }
-
-
-    .description {
-
-        font-size:18px;
-
-    }
-
-
-    .hero .main-btn {
-
-        margin-top:20px;
-
-    }
-
-
-
-    /* Последний экран */
-
-    .final {
-
-        min-height:85vh;
-
-        padding:20px 15px;
-
-    }
-
-
-    .final h1 {
-
-        font-size:42px;
-
-        line-height:1.1;
-
-    }
-
-
-    .final p {
-
-        font-size:22px;
-
-        margin-top:15px;
-
-    }
-
-
-}
-
-.photos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.photos .photo-card {
-    width: 250px;
-}
-
-.extra-photo {
-    margin-top: 30px;
-    width: 250px;
-}
-
-.family,
-.memories {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
-    padding: 40px;
-}
-
-
-.side-photo {
-    width: 250px;
-    flex-shrink: 0;
-}
-
-
-.side-photo img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-
-.text-box {
-    max-width: 350px;
-    text-align: center;
-}
-
-
-
-
-/* ТЕЛЕФОН */
-@media(max-width:768px){
-
-.family,
-.memories {
-
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-
-}
-
-
-.side-photo {
-
-    width: 75%;
-    max-width: 280px;
-
-}
-
-
-.side-photo img {
-
-    height: 260px;
-
-}
-
-
-.text-box {
-
-    order: 0;
-    max-width: 90%;
-
-}
-
-
-}
-
-.wishes {
-
-display:flex;
-align-items:center;
-justify-content:center;
-gap:35px;
-padding:40px;
-
-}
-
-
-
-.wish-photo {
-
-width:220px;
-height:300px;
-padding:10px;
-background:white;
-border-radius:15px;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,0.25);
-
-transform:rotate(-3deg);
-
-}
-
-
-
-.right-photo {
-
-transform:rotate(3deg);
-
-}
-
-
-
-.wish-photo img {
-
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:10px;
-
-}
-
-
-
-.wish-center {
-
-max-width:400px;
-text-align:center;
-
-}
-
-
-
-.wish-title {
-
-background:rgba(255,255,255,0.15);
-padding:15px;
-border-radius:20px;
-margin-bottom:20px;
-
-}
-
-
-
-.cards {
-
-display:flex;
-flex-direction:column;
-gap:15px;
-
-}
-
-
-
-.card {
-
-background:rgba(255,255,255,0.85);
-
-border-radius:20px;
-
-padding:15px;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,0.15);
-
-border:2px solid rgba(255,215,150,0.8);
-
-}
-
-
-
-.card h3 {
-
-margin:0;
-font-family:'Cormorant Garamond';
-
-font-size:28px;
-
-}
-
-
-
-.card p {
-
-margin:8px;
-
-}
-
-
-
-
-
-@media(max-width:768px){
-
-
-.wishes {
-
-    flex-direction:column;
-    gap:15px;
-    padding:20px;
-
-}
-
-
-
-/* первая картинка сверху */
-
-.left-photo {
-
-    order:1;
-
-}
-
-
-
-/* текст в центре */
-
-.wish-center {
-
-    order:2;
-    width:90%;
-
-}
-
-
-
-/* вторая картинка снизу */
-
-.right-photo {
-
-    order:3;
-
-}
-
-
-
-.wish-photo {
-
-    width:170px;
-    height:230px;
-
-}
-
-
-
-.wish-title {
-
-    padding:10px;
-    border-radius:20px;
-
-}
-
-
-
-.wish-title h2 {
-
-    font-size:22px;
-
-}
-
-
-
-.cards {
-
-    gap:10px;
-
-}
-
-
-
-.card {
-
-    padding:10px;
-
-}
-
-
-
-.card h3 {
-
-    font-size:22px;
-
-}
-
-
-
-.card p {
-
-    font-size:14px;
-
-}
-
-
-
-/* кнопка в самый низ */
-
-.wish-center button {
-
-    margin-top:20px;
-
-}
-
-
-
-}
-
-.wish-photo {
-
-background:#fff;
-
-padding:12px;
-
-border-radius:18px;
-
-box-shadow:
-0 8px 25px rgba(0,0,0,0.25);
-
-position:relative;
-
-}
-
-
-.wish-photo::before {
-
-content:"✨";
-
-position:absolute;
-
-top:-15px;
-right:-10px;
-
-font-size:25px;
-
-}
-
-@media(max-width:768px){
-
-
-/* ПЕРВЫЙ ЭКРАН */
-
-.hero {
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-
-.hero-content {
-
-    padding:20px;
-    margin-top:20px;
-
-}
 
 
 .hero h1 {
 
-    font-size:32px;
+
+font-size:34px;
+
 
 }
+
 
 
 .hero h2 {
 
-    font-size:26px;
 
-}
+font-size:40px;
 
-
-.subtitle {
-
-    font-size:18px;
-
-}
-
-
-.description {
-
-    font-size:16px;
 
 }
 
 
 
+.text-box h2 {
 
-/* ПОСЛЕДНИЙ ЭКРАН */
 
-.final {
+font-size:28px;
 
-    background-size: contain;
-    background-repeat:no-repeat;
-    background-position:center;
 
-    padding:20px;
+}
+
+
+
+.gallery {
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.polaroid img {
+
+
+height:230px;
+
 
 }
 
@@ -1821,185 +2255,9 @@ font-size:25px;
 
 .final h1 {
 
-    font-size:32px;
-    text-align:center;
 
-}
+font-size:34px;
 
-
-
-.final p {
-
-    font-size:18px;
-    text-align:center;
-
-}
-
-.hero,
-.final {
-
-    min-height:100vh;
-
-}
-
-.hero,
-.final {
-
-    background-color:#111;
-
-}
-
-.hero {
-
-background-position:center bottom;
-
-}
-}
-.final {
-
-background-position:center bottom;
-
-}
-
-@media(max-width:768px){
-
-
-.hero {
-
-background-position:center bottom;
-background-size:contain;
-
-}
-
-
-.final {
-
-background-position:center bottom;
-background-size:contain;
-
-}
-
-
-}
-
-@media(max-width:768px){
-
-.card {
-
-padding:7px;
-
-}
-
-.card p {
-
-font-size:13px;
-
-}
-
-.cards {
-
-gap:8px;
-
-}
-
-}
-
-
-@media(max-width:768px){
-
-
-.wishes {
-
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    padding:20px;
-
-}
-
-
-/* первая картинка */
-
-.left-photo {
-
-    order:1;
-
-}
-
-
-/* текст */
-
-.wish-center {
-
-    order:2;
-    width:90%;
-
-}
-
-
-
-/* вторая картинка */
-
-.right-photo {
-
-    order:3;
-
-}
-
-
-
-/* кнопка в самом низу */
-
-.wishes > button {
-
-    order:4;
-
-}
-
-
-
-.wish-photo {
-
-    width:160px;
-    height:220px;
-
-}
-
-
-
-.cards {
-
-    gap:8px;
-
-}
-
-
-
-.card {
-
-    padding:8px;
-
-}
-
-
-.card h3 {
-
-    font-size:20px;
-
-}
-
-
-.card p {
-
-    font-size:13px;
-
-}
-
-
-
-.wish-title h2 {
-
-    font-size:21px;
 
 }
 

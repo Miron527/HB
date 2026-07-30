@@ -14,12 +14,29 @@
 
 <link rel="stylesheet" href="/static/style.css">
 
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 </head>
 
 
 <body>
+
+
+<!-- ЛЕТАЮЩИЕ СЕРДЦА -->
+
+<div class="hearts">
+
+<span>❤️</span>
+<span>✨</span>
+<span>💛</span>
+<span>❤️</span>
+<span>✨</span>
+
+</div>
+
+
 
 
 <!-- МУЗЫКА -->
@@ -33,7 +50,10 @@
 
 
 
+
+
 <!-- ЭКРАН 1 -->
+
 
 <section class="screen hero">
 
@@ -44,13 +64,20 @@
 <div class="hero-content">
 
 
+<div class="magic-text">
+
+✨ Любимому папе ✨
+
+</div>
+
+
 <p class="subtitle">
 Поздравляем
 </p>
 
 
 <h1>
-🎂 С днем рождения, папа! 
+🎂 С днем рождения, папа!
 </h1>
 
 
@@ -72,6 +99,7 @@
 </button>
 
 
+
 </div>
 
 
@@ -82,22 +110,34 @@
 
 
 
-<<section class="screen family">
+
+<!-- ЭКРАН 2 -->
+
+
+<section class="screen family mobile-story">
+
 
 <div class="side-photo">
+
 <img src="/static/images/dad_emilia.jpg">
+
 </div>
 
 
+
+
 <div class="text-box">
+
 
 <h2>
 💛 От нашей большой семьи
 </h2>
 
+
 <p>
 Сегодня особенный день.
 </p>
+
 
 <p>
 Спасибо тебе за заботу,
@@ -106,19 +146,30 @@
 </p>
 
 
-<button onclick="nextScreen()">
-Дальше →
-</button>
 
 </div>
+
+
 
 
 <div class="side-photo">
+
 <img src="/static/images/family7.jpg">
+
 </div>
 
 
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
+
 </section>
+
 
 
 
@@ -140,12 +191,9 @@
 
 <div class="video-frame">
 
-
 <video controls>
 
-
 <source src="/static/video/emilia.mp4">
-
 
 </video>
 
@@ -153,9 +201,8 @@
 </div>
 
 
-
 <p>
-Видео от Мико❤️
+Видео от Мико ❤️
 </p>
 
 
@@ -175,21 +222,35 @@
 
 
 
-<section class="screen memories">
+
+<!-- ЭКРАН 4 -->
+
+
+<section class="screen memories mobile-story">
 
 
 <div class="side-photo">
+
 <img src="/static/images/dad_son.jpg">
+
 </div>
+
 
 
 
 <div class="text-box">
 
+
+<h2>
+❤️ Спасибо тебе
+</h2>
+
+
 <p>
 Спасибо за поддержку,
 советы и любовь.
 </p>
+
 
 <p>
 Все моменты рядом с тобой
@@ -197,18 +258,27 @@
 </p>
 
 
-<button onclick="nextScreen()">
-Дальше →
-</button>
-
 
 </div>
+
 
 
 
 <div class="side-photo">
+
 <img src="/static/images/family8.jpg">
+
 </div>
+
+
+
+
+<button onclick="nextScreen()">
+
+Дальше →
+
+</button>
+
 
 
 </section>
@@ -218,27 +288,41 @@
 
 
 
-<section class="screen wishes">
 
 
-<div class="wish-photo left-photo">
+
+<!-- ЭКРАН 5 -->
+
+
+<section class="screen wishes mobile-story">
+
+
+
+<div class="wish-photo">
+
 
 <img src="/static/images/family9.jpg">
 
+
 </div>
+
 
 
 
 <div class="wish-center">
 
 
+
 <div class="wish-title">
+
 
 <h2>
 💌 Несколько слов от каждого
 </h2>
 
+
 </div>
+
 
 
 
@@ -272,6 +356,9 @@
 
 </div>
 
+
+
+
 <div class="card">
 
 <h3>
@@ -287,6 +374,8 @@
 </div>
 
 
+
+
 <div class="card">
 
 <h3>
@@ -300,7 +389,26 @@
 </div>
 
 
+
 </div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="wish-photo">
+
+<img src="/static/images/family10.jpg">
+
+</div>
+
+
+
 
 
 
@@ -311,20 +419,11 @@
 </button>
 
 
-</div>
-
-
-
-
-<div class="wish-photo right-photo">
-
-<img src="/static/images/family10.jpg">
-
-</div>
-
-
 
 </section>
+
+
+
 
 
 
@@ -354,11 +453,13 @@
 </div>
 
 
+
 <div class="polaroid">
 
 <img src="/static/images/family1.jpg">
 
 </div>
+
 
 
 <div class="polaroid">
@@ -368,6 +469,7 @@
 </div>
 
 
+
 <div class="polaroid">
 
 <img src="/static/images/family3.jpg">
@@ -375,11 +477,13 @@
 </div>
 
 
+
 <div class="polaroid">
 
 <img src="/static/images/family4.jpg">
 
 </div>
+
 
 
 <div class="polaroid">
@@ -394,7 +498,6 @@
 
 
 
-
 <button onclick="nextScreen()">
 
 Дальше →
@@ -403,6 +506,8 @@
 
 
 </section>
+
+
 
 
 
@@ -438,9 +543,15 @@
 </p>
 
 
+
 <div class="final-stars">
+
 ✨ ✨ ✨
+
 </div>
+
+
+
 </section>
 
 
