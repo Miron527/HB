@@ -1047,137 +1047,333 @@ opacity:0;
 
 }
 
-/* 📱 Адаптация под телефоны */
+/* ========================= */
+/* 📱 МОБИЛЬНАЯ АДАПТАЦИЯ */
+/* ========================= */
 
-* {
-    box-sizing: border-box;
-}
+@media (max-width: 900px) {
 
-body {
-    overflow-x: hidden;
-}
-
-.section {
-    min-height: 100vh;
-    width: 100%;
-    padding: 30px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Заголовки */
-h1 {
-    font-size: clamp(32px, 8vw, 70px);
-    text-align: center;
-    line-height: 1.1;
-}
-
-h2 {
-    font-size: clamp(25px, 6vw, 50px);
-    text-align: center;
-}
-
-p {
-    font-size: clamp(16px, 4vw, 24px);
-    text-align: center;
-    max-width: 700px;
-}
-
-
-/* Кнопки */
-button,
-.btn {
-    width: 85%;
-    max-width: 350px;
-    padding: 16px 25px;
-    font-size: 18px;
-    border-radius: 50px;
-    margin-top: 25px;
-}
-
-
-/* Фото */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-
-/* Главное фото */
-.main-photo {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 25px;
-}
-
-
-/* Карточки поздравлений */
-.cards {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
-    width: 90%;
-    margin: auto;
-    padding: 25px;
-}
-
-
-/* Галерея */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%;
-}
-
-.gallery img {
-    width: 100%;
-    height: 160px;
-    border-radius: 20px;
-}
-
-
-/* Видео */
-video,
-iframe {
-    width: 95%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 25px;
-}
-
-
-/* Для маленьких телефонов */
-@media(max-width: 400px){
-
-    h1 {
-        font-size: 32px;
+    .screen {
+        min-height: 100vh;
+        width: 100%;
+        padding: 30px 15px;
+        flex-direction: column;
+        text-align: center;
     }
 
-    h2 {
-        font-size: 25px;
+
+    /* Главный экран */
+
+    .subtitle {
+        font-size: 24px;
+        letter-spacing: 3px;
     }
+
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 55px);
+        line-height: 1.1;
+    }
+
+
+    .hero h2 {
+        font-size: 55px;
+    }
+
+
+    .description {
+        font-size: 20px;
+    }
+
+
+
+    /* Кнопки */
+
+    button {
+        width: 90%;
+        max-width:350px;
+        padding:16px 20px;
+        font-size:17px;
+        margin-top:25px;
+    }
+
+
+
+    /* Фото */
+
+    .photo-card {
+        width:90%;
+        max-width:350px;
+        padding:10px;
+        margin:auto;
+    }
+
+
+    .photo-card img {
+
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+}
+
+
+
+    /* Текст */
+
+    .text-box {
+
+        width:100%;
+        max-width:500px;
+        margin:30px 0 0 0;
+
+    }
+
+
+    .text-box h2{
+    font-size:42px;
+    line-height:1.15;
+}
+
+
+    .text-box p {
+
+        font-size:18px;
+        line-height:1.5;
+
+    }
+
+
+
+    /* Видео */
+
+
+    .video-section h2 {
+
+        font-size:35px;
+
+    }
+
+
+    .video-frame {
+
+        width:95%;
+        margin:25px 0;
+        padding:10px;
+
+    }
+
+
+    .video-frame video {
+
+        width:100%;
+        height:auto;
+
+    }
+
+
+
+    /* Карточки */
+
+    .cards {
+
+        display:flex;
+        flex-direction:column;
+
+        gap:20px;
+
+        width:100%;
+
+        margin:30px 0;
+
+    }
+
+
+
+    .card {
+
+        width:90%;
+        margin:auto;
+
+        padding:25px;
+
+    }
+
+
+
+    .card h3 {
+
+        font-size:30px;
+
+    }
+
+
+
+    /* Галерея */
+
 
     .gallery {
-        grid-template-columns: 1fr;
+
+        width:100%;
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+        margin:25px 0;
+
     }
 
-    .gallery img {
-        height: 220px;
+
+
+    .polaroid {
+
+        padding:8px;
+
     }
 
-    button,
-    .btn {
-        font-size: 16px;
-        width: 95%;
+
+
+    .polaroid img {
+
+        width:100%;
+
+        height:150px;
+
+        object-fit:cover;
+
+    }
+
+
+
+    /* Финал */
+
+
+    .final h1 {
+
+        font-size:45px;
+
+    }
+
+
+    .final p {
+
+        font-size:22px;
+
+    }
+
+}
+
+
+
+/* маленькие телефоны */
+
+@media(max-width:420px){
+
+
+    .hero h1 {
+
+        font-size:35px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:45px;
+
+    }
+
+
+    .subtitle {
+
+        font-size:20px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .polaroid img {
+
+        height:230px;
+
+    }
+
+
+    .text-box h2 {
+
+        font-size:30px;
+
+    }
+
+
+}
+
+@media(max-width:900px){
+
+    .memories,
+    .family {
+
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+
+    }
+
+
+    .memories .text-box,
+    .family .text-box {
+
+        order:1;
+
+        width:90%;
+        margin:25px auto;
+
+    }
+
+
+    .memories .photo-card,
+    .family .photo-card {
+
+        order:2;
+
+        width:85%;
+        max-width:350px;
+
+        transform:rotate(-2deg);
+
+    }
+
+
+    .memories .text-box h2,
+    .family .text-box h2 {
+
+        font-size:38px;
+        text-align:center;
+        line-height:1.2;
+
+    }
+
+
+    .memories .text-box p,
+    .family .text-box p {
+
+        font-size:20px;
+        text-align:center;
+
+        max-width:500px;
+
+        margin:auto auto 15px;
+
     }
 
 }
