@@ -2264,3 +2264,374 @@ font-size:34px;
 
 
 }
+
+/* =====================================================
+   📱 ФИНАЛЬНАЯ НАСТРОЙКА ТЕЛЕФОНА
+   ПЕРВЫЙ ЭКРАН + ВИДЕО
+===================================================== */
+
+
+@media(max-width:768px){
+
+
+
+/* =====================
+   🎂 ПЕРВЫЙ ЭКРАН
+===================== */
+
+
+.hero {
+
+
+    background-size:110% auto;
+
+
+    background-position:center bottom;
+
+
+    min-height:100vh;
+
+
+    align-items:flex-start;
+
+
+}
+
+
+
+.hero-content {
+
+
+    margin-top:55px;
+
+
+    padding:10px;
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+.magic-text {
+
+
+    font-size:22px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+.subtitle {
+
+
+    font-size:18px;
+
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+.hero h1 {
+
+
+    font-size:30px;
+
+
+    line-height:1.15;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+.hero h2 {
+
+
+    font-size:38px;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+.description {
+
+
+    font-size:15px;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+.hero .main-btn {
+
+
+    margin-top:20px;
+
+
+    padding:13px 25px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+/* чтобы фото больше помещалось */
+
+
+.hero {
+
+
+    background-size:120% auto;
+
+
+}
+
+
+
+
+}
+
+
+
+/* маленькие телефоны */
+
+
+@media(max-width:420px){
+
+
+
+.hero-content {
+
+
+    margin-top:35px;
+
+
+}
+
+
+
+.hero {
+
+
+    background-size:125% auto;
+
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:27px;
+
+
+}
+
+
+
+.hero h2 {
+
+
+    font-size:34px;
+
+
+}
+
+
+}
+
+
+
+
+/* =====================================================
+   🎬 ЭКРАН 3 - ВИДЕО
+===================================================== */
+
+
+.video-section {
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+.video-section h2 {
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.video-frame {
+
+
+    width:520px;
+
+
+    max-width:85%;
+
+
+    padding:12px;
+
+
+    border-radius:30px;
+
+
+}
+
+
+
+
+
+.video-frame video {
+
+
+    width:100%;
+
+
+    height:auto;
+
+
+    max-height:650px;
+
+
+    object-fit:contain;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+
+.video-section {
+
+
+    padding:25px 15px;
+
+
+}
+
+
+
+
+.video-section h2 {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+.video-frame {
+
+
+    width:90%;
+
+
+    max-width:350px;
+
+
+    margin:20px auto;
+
+
+    padding:10px;
+
+
+}
+
+
+
+
+
+.video-frame video {
+
+
+    width:100%;
+
+
+    height:auto;
+
+
+    max-height:420px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+.video-section p {
+
+
+    font-size:18px;
+
+
+}
+
+
+
+}
