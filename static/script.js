@@ -399,11 +399,137 @@ final.getBoundingClientRect().top;
 
 
 
-if(position < window.innerHeight){
+if(// =====================================
+// 🎂 САЙТ ДЕНЬ РОЖДЕНИЯ ПАПЫ
+// =====================================
 
-    hearts();
+
+let currentScreen = 0;
+
+
+const screens = document.querySelectorAll(".screen");
+
+
+
+// =====================================
+// 🎁 Открыть поздравление
+// =====================================
+
+function openGift(){
+
+
+    const music = document.getElementById("music");
+
+
+    if(music){
+
+        music.volume = 0.5;
+
+        music.play().catch(()=>{
+
+            console.log("Музыка ждёт взаимодействия");
+
+        });
+
+    }
+
+
+    nextScreen();
+
 
 }
+
+
+
+
+// =====================================
+// ➡️ Следующий экран
+// =====================================
+
+function nextScreen(){
+
+
+    if(currentScreen < screens.length - 1){
+
+
+        currentScreen++;
+
+
+        screens[currentScreen].scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"start"
+
+        });
+
+
+    }
+
+
+}
+
+
+
+// =====================================
+// 🎵 Запуск музыки после первого клика
+// =====================================
+
+document.addEventListener("click",()=>{
+
+
+    const music = document.getElementById("music");
+
+
+    if(music && music.paused){
+
+
+        music.play().catch(()=>{});
+
+
+    }
+
+
+},{once:true});
+
+
+
+
+// =====================================
+// ✨ Появление элементов при прокрутке
+// =====================================
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+    entries.forEach(entry=>{
+
+
+        if(entry.isIntersecting){
+
+
+            entry.target.classList.add("show");
+
+
+        }
+
+
+    });
+
+
+},{
+
+    threshold:0.2
+
+});
+
+
+
+document.querySelectorAll(".screen > *").forEach(el=>{
+
+
+    observer.observe(el);
 
 
 });
@@ -412,32 +538,18 @@ if(position < window.innerHeight){
 
 
 
+// =====================================
+// 🔥 Защита от ошибок старых эффектов
+// =====================================
 
 
+// если остался старый код сердечек,
+// он больше ничего не ломает
 
 function randomColor(){
 
 
-    let colors=[
-
-        "#FFD700",
-
-        "#fff",
-
-        "#ffcc66",
-
-        "#ff8080",
-
-        "#e6b84d"
-
-    ];
-
-
-    return colors[
-        Math.floor(
-        Math.random()*colors.length
-        )
-    ];
+    return "#ffd86b";
 
 
 }
